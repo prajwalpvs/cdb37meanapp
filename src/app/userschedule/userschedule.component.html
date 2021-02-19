@@ -1,0 +1,41 @@
+<div class="container-fluid col-6">
+    <p class="display-6  text-secondary mt-2">Todo List of {{username1}}</p>
+<form class="row g-3 bg-light " class="form" #formRef="ngForm" (ngSubmit)="formRef.form.valid&&onSubmit(formRef)">
+  
+     <!--Username-->
+  <div class="col-6">
+    <label for="inputUsername" class="form-label">Username</label>
+    <input type="text" class="form-control" id="inputusername" [ngModel]="username1" name="username" readonly ngModel required #username="ngModel">
+  </div>
+ 
+  <!--Username-->
+  <div class="col-6">
+    <label for="inputUsername" class="form-label">Activity</label>
+    <input type="text" class="form-control" id="inputactivity"  name="activity" ngModel required #activity="ngModel">
+  </div>
+ 
+  <div class="col-6">
+    <label for="inputUsername" class="form-label">Date</label>
+    <input type="date" class="form-control" id="inputUsername" placeholder="" name="date" ngModel required #date="ngModel"> 
+  </div>
+    <!--Register Button-->
+    <div class="col-4">
+      <button type="submit" class="btn btn-primary">Add activity</button>
+    </div>
+  </form>
+ 
+<div class="container mx-auto">
+    <div class="table" style="display: block; margin: auto;">
+        <thead  class="p-5">
+            <th>Activity </th>
+            <th> Date</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                
+            </tr>
+            
+        </tbody>
+    </div>
+</div>
